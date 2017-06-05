@@ -22,19 +22,28 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.dgv = New System.Windows.Forms.DataGridView()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(110, 46)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(292, 88)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'dgv
         '
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgv.Location = New System.Drawing.Point(0, 0)
+        Me.dgv.Location = New System.Drawing.Point(79, 169)
         Me.dgv.Name = "dgv"
         Me.dgv.RowTemplate.Height = 24
-        Me.dgv.Size = New System.Drawing.Size(1370, 691)
-        Me.dgv.TabIndex = 0
+        Me.dgv.Size = New System.Drawing.Size(971, 466)
+        Me.dgv.TabIndex = 1
         '
         'Form1
         '
@@ -42,6 +51,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1370, 691)
         Me.Controls.Add(Me.dgv)
+        Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
@@ -49,5 +59,6 @@ Partial Class Form1
 
     End Sub
 
+    Friend WithEvents Button1 As Button
     Friend WithEvents dgv As DataGridView
 End Class

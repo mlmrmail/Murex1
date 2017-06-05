@@ -1,20 +1,15 @@
 ﻿Public Class Form1
-
-
-    Private Sub Form1_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-
-        With dgv
-            .Columns.Add("colDate", "DATE")
-            .Columns.Add("colInstrument", "INSTRUMENTS")
-            .Columns.Add("colPortfolio", "PORTFOLIO")
-            .Columns.Add("colFlows", "FLOWS")
-        End With
-
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim fr As New FileReader
+        ' fr = New FileReader("D:\MYDATA\DEV\MUREX\MONIQUE\LIQ_TEST.xlsb")
+        Try
+            dgv.DataSource = fr.ReadExcelFile().Tables(0)
+        Catch ex As Exception
+            MsgBox(ex)
+        End Try
 
 
     End Sub
-
 
 
 End Class
